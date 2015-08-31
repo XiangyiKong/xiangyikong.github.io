@@ -2,11 +2,13 @@
 # This file contains configuration flags to customize your site
 #
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-default_image: /images/photo.JPG
+
 
 # Name of your site (displayed in the header)
 name: "CS371p Fall 2015: Xiangyi Kong"
+
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: /images/photo.JPG
 
 # Short bio or description (displayed in the header)
 description: "Software Engineering Blog"
