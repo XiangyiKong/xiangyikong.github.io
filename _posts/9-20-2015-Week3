@@ -1,0 +1,28 @@
+---
+layout: post
+title: Third Blog!!
+---
+
+We had a presentation by Chris Martin from Bloomberg. He covered not only the work experience, latest developing tools, 
+and community involvement at Bloomberg but also discussed helpful tips to prepare for interviews, and what should do at
+a career fair. It’s an inspiring and useful speech that offers me insight into the working environment in the technical 
+industry.  When he talked about how to stand out in an interview, I found out that in the following areas that I can still
+improve myself, such as open source contribution, building my own portfolio. What he said really strikes me is that “We
+always keep learning new things even at work because of the fast technology advancement. ” I still remember that when
+I was a freshman at UT, github is not a popular development tool yet, but 3 years passed, thousands of new technologies 
+are in heavily use in the industry. 
+
+On Friday, the professor stressed the importance of having exceptions handled in our codes, and made a memorable story 
+that further illustrated the consequences of ignoring the potential invalid input. Professor Downing also played a while 
+with pointers in C++, which differentiated between pass-by-value and pass-by-reference. Try and catch block is also a big 
+topic covered on Friday. The actual flow depending on whether the function catches the exception can create different 
+scenarios, which need careful evaluations.
+
+On Friday’s quiz, I missed the second question. Even though I finished reading the required materials, I didn’t quite read 
+in a thorough way, so I failed to notice the details mentioned in the paper. Now, I know the correct answer and memorized it 
+-- “ When coming to pair programming, we discard independent work and rewrite it.”
+
+### Tip of the week
+Do more interview preparation
+Resume review
+Keep programming
