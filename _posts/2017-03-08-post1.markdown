@@ -34,3 +34,5 @@ These data are available for most locations across the United States, at a varie
 ##### Cleaning
 
 <img src="../images/first.png" alt="image">
+![Proposal for the New Circle](../images/first.png "Proposal for the new circle.")
+
