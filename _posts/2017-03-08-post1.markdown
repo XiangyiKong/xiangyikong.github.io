@@ -32,4 +32,4 @@ These data are available for most locations across the United States, at a varie
 
 
 ##### Cleaning
-<img src="../images/first" alt="image" height="42" width="42">
+<img src="../images/first" alt="image">
