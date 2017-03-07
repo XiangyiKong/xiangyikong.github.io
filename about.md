@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-* Author: Xiangyi Kong
+<!-- * Author: Xiangyi Kong
 * Github: http://github.com/xiangyikong
-* Portfolio: http://xiangyikong.github.io
+* Portfolio: http://xiangyikong.github.io -->
