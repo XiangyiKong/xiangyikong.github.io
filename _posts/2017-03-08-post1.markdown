@@ -53,12 +53,15 @@ Next, we plotted one pollutant’s total emission for the year 2016 for each sta
 
 ![co emissions](/images/fourth.png)
 
-Moreover, we plotted the daily average released quantity of NO_2, CO, SO_2, O_3 from 2010 - 2016 for the top 30 states. This gives us insight about which state has more pollutants than other. 
+Moreover, we plotted the daily average released quantities of NO_2, CO, SO_2, O_3 of the top 30 states from 2010 - 2016 . This gives us insight about which state has more pollutants than other in 2010 - 2016. 
 
-![released quantity](/images/SO2_daily_avg_2010-2016.png)
-![released quantity](/images/NO2_daily_avg_2010-2016.png)
-![released quantity](/images/CO_daily_avg_2010-2016.png)
-![released quantity](/images/O3_daily_avg_2010-2016.png)
+![SO2 released quantity](/images/SO2_daily_avg_2010-2016.png)
+
+![NO2 released quantity](/images/NO2_daily_avg_2010-2016.png)
+
+![CO released quantity](/images/CO_daily_avg_2010-2016.png)
+
+![O3 released quantity](/images/O3_daily_avg_2010-2016.png)
 
 
 
