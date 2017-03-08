@@ -55,13 +55,13 @@ Next, we plotted one pollutant’s total emission for the year 2016 for each sta
 
 Moreover, we use ggplot() to get the daily average released quantities of NO_2, CO, SO_2, O_3 of the top 30 states from 2010 - 2016. This gives us insight about which state has more pollutants than other in 2010 - 2016. 
 
-![SO2 released quantity](/images/SO2_daily_avg_2010-2016.png)
+![SO2 released quantity](/images/SO2.png)
 
-![NO2 released quantity](/images/NO2_daily_avg_2010-2016.png)
+![NO2 released quantity](/images/NO2.png)
 
-![CO released quantity](/images/CO_daily_avg_2010-2016.png)
+![CO released quantity](/images/CO.png)
 
-![O3 released quantity](/images/O3_daily_avg_2010-2016.png)
+![O3 released quantity](/images/O3.png)
 
 
 
