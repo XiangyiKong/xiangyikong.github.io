@@ -3,7 +3,7 @@ title: Pollution is NOT cool, yo
 email: 
 description: > # this means to ignore newlines until "baseurl:"
   Jekyll Theme Demo
-baseurl: "https://github.com/XiangyiKong/xiangyikong.github.io" # the subpath of your site, e.g. /blog/
+baseurl: # the subpath of your site, e.g. /blog/
 url: "http://xiangyikong.github.io" # the base hostname & protocol for your site
 twitter_username: 
 github_username: xiangyikong
