@@ -4,7 +4,8 @@ title: "Blog Post 1"
 date: 2017-03-08
 categories:
 ---
-Team member: Andy Jones, Dan Liu, Duo Shen, Xiangyi Kong
+2017 Data Science project analyzing US pollution trends from 2000 to 2016.
+By Dan Liu, Xiangyi Kong, Duo Shen, and Andy Jones
 
 #### Big idea
 Environment problems are becoming more and more severe globally, and issues surrounding pollution are getting increasing attention. In this project, we are interested in examining data related to US pollution. We hope to analyze these data, visualize them in several dimensions such as region, year, pollutant. Also we wish to build regression model to predict trends in US pollution. 
