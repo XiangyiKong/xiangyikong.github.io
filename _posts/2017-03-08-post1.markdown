@@ -4,9 +4,11 @@ title: "Blog Post 1"
 date: 2017-03-08
 categories:
 ---
-##### Big idea
+#### Big idea
+Big idea
+We hope to analyze, predict, and visualize trends in US pollution.
 
-##### Dataset information
+#### Dataset information
 
 For our final project, we are using a dataset from the EPA (https://aqsdr1.epa.gov/aqsweb/aqstmp/airdata/download_files.html) that contains details about pollution in the US from 2000 to 2016 daily. The dataset contains information about emission rates by various pollutants by different locations. For each pollutant (NO2, O3, SO2, and O3), the dataset contains information about:
 - Site info
@@ -31,7 +33,40 @@ These data are available for most locations across the United States, at a varie
 - etc.
 
 
-##### Cleaning
+#### Cleaning
+We chose to use the pandas module in python to clean the raw data. For the observation sites’ data, there are columns that we think are trivial and won’t be needed in future analysis, so we only extract some of the attributes. The columns for sites and a sample data looks like:
 
-![Step 1](/images/first.png "Step 1")
+![data](/images/first.png)
+
+To scale the dataset, we take the data from 2010 to 2016 and merge them to a single csv file for each pollutant. Since the sites’ information is already in the sites.csv, we only keep the State Code, County Code and Site Number for future join purpose. The columns for one pollutant and a sample data looks like:
+
+![data](/images/second.png)
+
+#####Analysis so far
+Descriptive statistics:
+To begin, we found it helpful to run some basic descriptive statistics on the dataset to get a feel for the ranges of certain values and potential outliers.
+
+As a first step, we plotted the mean daily emission rate for each pollutant and their standard deviations. This provides a useful bird’s eye view of the data. We can immediately see that NO2 is emitted at a greater rate than the other pollutants. The next most common are SO2, CO, and O3. We can also see that the data for each pollutant demonstrates a relatively large standard deviation, which is sensible because pollution varies greatly day to day.
+
+![pollutant](/images/third.png)
+
+Next, we plotted one pollutant’s total emission for the year 2016 for each state. This gives us useful insight into which states are releasing substantially more or less pollution, and could allow us to make more informed decisions about ruling out outliers in the future. At first glance, one can notice that California produces a substantially higher amount of CO pollution than the other states.
+
+![co emissions](/images/fourth.png)
+
+
+##### Regression:
+Finally, we plotted an example of one way we could begin to look for trends in our data using linear regression. Specifically, we looked at whether NO2 and O3 show a linear relationship in daily emission rates. Using scikit-learn’s linear regression model, we found that these two pollutants show a positive correlation, which makes sense because locations that are polluting more are likely emitting more than one substance. Note that this analysis was done with a smaller subset of the entire database (50 data points for each state).
+
+![regression](/images/fifth.png)
+
+
+#### Future directions
+
+
+Sources
+https://www.kaggle.com/sogun3/uspollution
+http://scikit-learn.org/stable/
+
+
 
