@@ -72,7 +72,7 @@ Finally, we plotted an example of one way we could begin to look for trends in o
 
 
 #### Future directions
-We want to build more visualisation graphs in other dimensions, like creating a dynamic U.S. map to show the polluted area in each state. Moreover, we want to analyze our data and build more regression models based on different pollutants. 
+We want to build more visualisation graphs in other dimensions, like creating a dynamic U.S. map to show the polluted area in each state. Moreover, we want to analyze our data and build more regression models based on different pollutants. We also hope to employ clustering algorithms to better understand the various ways that the data can be grouped. Ideally, these statistical models could be used to predict certain phenomena in US pollution by using a train-test pipeline with our data.
 
 #### Sources
 https://www.kaggle.com/sogun3/uspollution
