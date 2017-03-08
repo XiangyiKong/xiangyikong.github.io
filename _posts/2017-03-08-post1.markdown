@@ -5,7 +5,7 @@ date: 2017-03-08
 categories:
 ---
 #### Big idea
-We hope to analyze, predict, and visualize trends in US pollution.
+Environment problems are becoming more and more severe globally. And the polltion issues are getting increasing attention. In this background, we are interested in looking for data related to US pollution. We hope to analyze these data, visualize them in multidimensions such as region, year, pollutant. Also we wish to build regression model to predict trends in US pollution. 
 
 #### Dataset information
 
