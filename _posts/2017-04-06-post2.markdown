@@ -4,3 +4,73 @@ title: "Blog Post 2"
 date: 2017-04-06
 categories: 
 ---
+2017 Data Science project analyzing US pollution trends from 2010 to 2016.
+
+
+By Dan Liu, Xiangyi Kong, Duo Shen, and Andy Jones
+
+### Machine Learning Analysis
+We brainstormed some hypothesis:
+
+* Linear regression between average daily emission levels of two pollutants for each state.
+* Linear regression between population of state and its emission of one pollutant. (Need another dataset for state population for this.)
+* SVM (binary or multi-class) between different types of location settings (suburban, urban, rural, etc.)
+Features would be vector of emission rates.
+* SVM between different types of land uses (residential, agricultural, etc.).
+Features would be vector of emission rates.
+* Linear regression between elevation and emission level.
+* SVM between cities that have major industries that require emitting pollution and those that do not.
+* Regression between emission levels and the prevalence of pollution-related diseases in that area (e.g., heart and lung problems).
+
+For now, we decide to work on the 3rd and 5th hypothesis.
+
+#### SVM (binary or multi-class) between different types of location settings (suburban, urban, rural, etc.)
+
+We get the location settings to be labels and their average emission value of each pollutant to be features.
+
+
+#### Linear regression between elevation and emission level.
+
+We extract the "elevation" feature from our sites.csv data, and get the average emission value of each site. The training data looks like this:
+
+[elevation, average emission level]
+
+We try to train the data with linear regression model, but the result is not satisfactory, so we choose to use polynomial feature map by adding another "latitude" feature, which gives us a better result than the previoius one.  
+
+[elevation, latitude, average emission level]
+
+For this model, we also noticed that there are outliners that negatively affect our result, and we are going to remove them in the next phase of our project. 
+
+Linear Regression Model Result:
+training model accuracy: 1%
+
+Polynomial Feature Map Result:
+training model accuracy: 40%
+
+![training data points](/images/datapoints.png)
+
+
+
+### More Visualization
+We made lots of visualizations to investigate several questions and test some interesting hypothesis. The analyses and visualizations are shown below.
+
+* Which state emits the most of all the pollutants (CO, NO2, O3, SO2) over the years from 2010 to 2016?
+
+	Figures 1-3 show the total emission of all four pollutants in each state,  which gives us a sense of what the breakdown of how much each pollutant is contributing in each state. During this stage, we also found that the dataset contains varying units for levels of emission: NO2 and SO2 are in parts per billion (ppb), while CO and O3 are in different units parts per million (ppm). Overall, it is obvious that NO2 has the most total average daily emissions from 2010 to 2016 across most states, except a few states like HI, WV, NE and VI.
+
+![Figure 1. Total average emissions, 2010-2016](/images/Total_average_emissions_2010-2016.png) 
+
+![Figure 2. SO2 and NO2 average emissions, 2010-2016](/images/SO2_and_NO2_average_emissions_2010-2016.png)
+
+![Figure 3. O3 and CO average emissions, 2010-2016](/images/O3_and_CO_average_emissions_2010-2016.png)
+
+* How does the daily average emission of a single pollutant change over the years from 2010 to 2016?
+
+	Figures 4-5 show how emission changes over these years for each pollutant.  From the last three bar charts, we noticed that it is difficult (and often looks cluttered) to include the four pollutants in a single graph, so we divide into 2 graphs same as the bar charts. Moreover, the graph tells us that the emission has decreased for NO2, CO, SO2, but the emission for O3 has stayed the same.
+
+![Figure 4. US daily average emissions from 2010-2016 (NO2vsSO2)](/images/US_daily_average_emissions_from_2010-2016_NO2vsSO2.png)
+
+![Figure 5. US daily average emissions from 2010-2016 (COvsO3)](/images/US_daily_average_emissions_from_2010-2016_COvsO3.png)
+
+
+
