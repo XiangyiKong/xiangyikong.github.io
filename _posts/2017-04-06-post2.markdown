@@ -75,6 +75,8 @@ Results:
 * Cross validation accuracy mean: 62.8%
 * Cross validation accuracy standard deviation: 19.2
 
+##### Interpretation of SVM results
+In the final two tests, we observed better-than-random performance of the SVM. The accuracy rates of these four SVMs give us several insights into the organization of our data. First, It is clear that the data is more accurately classified when there are just two labels (urban and rural) compared to three (urban, rural, and suburban). This result is intuitive because suburban sites are expected to be a mixture of the two extremes, and they could make the data harder to split with a linear SVM. Second, the SVMs performed better when they were trained with features from the raw emission levels rather than AQI. This is somewhat confusing, since AQI is expected to be a comprehensive measure, but it is possible that the raw emission rates show more drastic differences between the location setting types. Finally, these results allow us to brainstorm possible ways to improve future analyses. One option is to use larger features for training. This might involve bringing in a new dataset. We might also consider splitting the data by month or season, as these variables could affect emission rates.
 
 #### Linear regression between elevation and emission level.
 
