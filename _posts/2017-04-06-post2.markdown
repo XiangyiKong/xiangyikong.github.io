@@ -27,6 +27,8 @@ For now, we decide to work on the 3rd and 5th hypothesis.
 
 Our dataset is split between three different "location settings", whic are essentially a label of the population density and urbanness of the pollution measurement site. The EPA defines three types of settings: suburban, urban, and rural. Given that we would expect most pollution sites to be located in areas with lots of industrial companies and workers, we sought to understand how pollution emission levels vary between these different types of settings.
 
+To examine this statistically, we concluded that an SVM classifier would be the best analysis tool to see how the data can be separated across multiple dimensions of emission levels. Since our dataset contains several metrics of emission levels, we trained multiple SVMs using different training features in order to find which peformed with the highest test accuracy.
+
 
 #### Linear regression between elevation and emission level.
 
