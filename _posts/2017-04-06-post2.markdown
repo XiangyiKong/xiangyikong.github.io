@@ -80,11 +80,11 @@ In the final two tests, we observed better-than-random performance of the SVM. T
 
 #### Linear regression between elevation and emission level.
 
-We extract the "elevation" feature from our sites.csv data, and get the average emission value of each site. The training data looks like this:
+We extracted the "elevation" feature from our sites.csv data, and obtained the average emission value of each site. The training data looks like this:
 
 [elevation, average emission level]
 
-We try to train the data with linear regression model, but the result is not satisfactory, so we choose to use polynomial feature map by adding another "latitude" feature, which gives us a better result than the previoius one.  
+We trained a linear regression model with these features, but the result is not satisfactory, so we chose to use a three-dimensional feature map by adding another "latitude" feature, which gives us a better result than the previous one.  
 
 [elevation, latitude, average emission level]
 
@@ -101,7 +101,7 @@ training model accuracy: 43.6%
 
 
 ### More Visualization
-We made lots of visualizations to investigate several questions and test some interesting hypothesis. The analyses and visualizations are shown below.
+We made lots of visualizations to investigate several questions and test some interesting hypotheses. The analyses and visualizations are shown below.
 
 * Which state emits the most of all the pollutants (CO, NO2, O3, SO2) over the years from 2010 to 2016?
 
