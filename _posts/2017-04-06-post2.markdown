@@ -53,10 +53,10 @@ We try to train the data with linear regression model, but the result is not sat
 For this model, we also noticed that there are outliners that negatively affect our result, and we are going to remove them in the next phase of our project. 
 
 Linear Regression Model Result:
-training model accuracy: 1%
+training model accuracy: 1.9%
 
 Polynomial Feature Map Result:
-training model accuracy: 40%
+training model accuracy: 43.6%
 
 ![training data points](/images/datapoints.png)
 
