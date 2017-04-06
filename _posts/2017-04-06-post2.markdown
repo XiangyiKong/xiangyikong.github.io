@@ -65,10 +65,12 @@ We made lots of visualizations to investigate several questions and test some in
 
 ![Figure 2. SO2 and NO2 average emissions, 2010-2016](/images/SO2_and_NO2_average_emissions_2010-2016.png)
 
+{:.image-caption}
 *Figure 2. SO2 and NO2 average emissions, 2010-2016*
 
 ![Figure 3. O3 and CO average emissions, 2010-2016](/images/O3_and_CO_average_emissions_2010-2016.png)
 
+{:.image-caption}
 *Figure 3. O3 and CO average emissions, 2010-2016*
 
 * How does the daily average emission of a single pollutant change over the years from 2010 to 2016?
@@ -77,10 +79,12 @@ We made lots of visualizations to investigate several questions and test some in
 
 ![Figure 4. US daily average emissions from 2010-2016 (NO2vsSO2)](/images/US_daily_average_emissions_from_2010-2016_NO2vsSO2.png)
 
+{:.image-caption}
 *Figure 4. US daily average emissions from 2010-2016 (NO2vsSO2)*
 
 ![Figure 5. US daily average emissions from 2010-2016 (COvsO3)](/images/US_daily_average_emissions_from_2010-2016_COvsO3.png)
 
+{:.image-caption}
 *Figure 5. US daily average emissions from 2010-2016 (COvsO3)*
 
 
