@@ -29,6 +29,16 @@ Our dataset is split between three different "location settings", whic are essen
 
 To examine this statistically, we concluded that an SVM classifier would be the best analysis tool to see how the data can be separated across multiple dimensions of emission levels. Since our dataset contains several metrics of emission levels, we trained multiple SVMs using different training features in order to find which peformed with the highest test accuracy.
 
+For each SVM, we performed 10-fold cross-validation.
+
+SVM 1. 
+Each data point is a pollution measurement site.
+Features: Mean pollution emission levels for each pollutant (CO, NO2, SO2, O3).
+Labels: Location setting type [suburban, urban, rural].
+
+Cross validation accuracy mean: 47.6%
+Cross validation accuracy standard deviation: 12.0
+
 
 #### Linear regression between elevation and emission level.
 
