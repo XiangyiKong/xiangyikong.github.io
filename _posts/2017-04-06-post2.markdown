@@ -15,7 +15,6 @@ We brainstormed some hypothesis:
 * Linear regression between average daily emission levels of two pollutants for each state.
 * Linear regression between population of state and its emission of one pollutant. (Need another dataset for state population for this.)
 * SVM (binary or multi-class) between different types of location settings (suburban, urban, and rural)
-Our dataset is split between three different "location settings", whic are essentially a label of the population density and urbanness of the pollution measurement site. The EPA defines three types of settings: suburban, urban, and rural. Given that we would expect most pollution sites to be located in areas with lots of industrial companies and workers, we sought to understand how pollution emission levels vary between these different types of settings.
 * SVM between different types of land uses (residential, agricultural, etc.).
 Features would be vector of emission rates.
 * Linear regression between elevation and emission level.
@@ -26,7 +25,7 @@ For now, we decide to work on the 3rd and 5th hypothesis.
 
 #### SVM (binary or multi-class) between different types of location settings (suburban, urban, rural, etc.)
 
-We get the location settings to be labels and their average emission value of each pollutant to be features.
+Our dataset is split between three different "location settings", whic are essentially a label of the population density and urbanness of the pollution measurement site. The EPA defines three types of settings: suburban, urban, and rural. Given that we would expect most pollution sites to be located in areas with lots of industrial companies and workers, we sought to understand how pollution emission levels vary between these different types of settings.
 
 
 #### Linear regression between elevation and emission level.
