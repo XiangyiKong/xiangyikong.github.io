@@ -76,6 +76,9 @@ We made lots of visualizations to investigate several questions and test some in
 
 ![Figure 4. US daily average emissions from 2010-2016 (NO2vsSO2)](/images/US_daily_average_emissions_from_2010-2016_NO2vsSO2.png)
 
+{:.image-caption}
+*hello world*
+
 -> Figure 4. US daily average emissions from 2010-2016 (NO2vsSO2) <- 
 
 ![Figure 5. US daily average emissions from 2010-2016 (COvsO3)](/images/US_daily_average_emissions_from_2010-2016_COvsO3.png)
