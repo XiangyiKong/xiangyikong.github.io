@@ -31,7 +31,7 @@ To examine this statistically, we concluded that an SVM classifier would be the 
 
 For each SVM, we performed 10-fold cross-validation. Each data point is a pollution measurement site.
 
-# SVM 1
+##### SVM 1
 The first metric we used as features to train the SVM were the average daily emission rates for each pollutant. This was a natural starting point for training the SVM, since raw emission levels are a standard measurement of pollution rates.
 
 Features: Mean pollution emission levels for each pollutant (CO, NO2, SO2, O3).
@@ -40,7 +40,7 @@ Labels: Location setting type [suburban, urban, rural].
 Cross validation accuracy mean: 47.6%
 Cross validation accuracy standard deviation: 12.0
 
-# SVM 2
+##### SVM 2
 Next, we used the Air Quality Index (AQI) scores as input features. AQI is a more comprehensive measure of air quality and the extent of pollution. Since the accuracy level of SVM 1 was not particularly astounding, we hoped that this metric would potentially improve accuracy.
 
 Features: AQI values for each pollutant (CO, NO2, SO2, O3).
@@ -49,7 +49,7 @@ Labels: Location setting type [suburban, urban, rural].
 Cross validation accuracy mean: 44.7%
 Cross validation accuracy standard deviation: 6.17
 
-# SVM 3
+##### SVM 3
 After the first two SVM attempts, we decided to reevaluate our data's labels. Since the "suburban" category could possibly be an ambiguous intermediate between "urban" and "rural", we next tried simply classifying between rural and urban, as these two categories differ more drastically.
 
 Features: Mean pollution emission levels for each pollutant (CO, NO2, SO2, O3).
@@ -58,7 +58,7 @@ Labels: Location setting type [urban, rural].
 Cross validation accuracy mean: 72.8%
 Cross validation accuracy standard deviation: 6.55
 
-# SVM 4
+##### SVM 4
 Finally, we did the same binary classification task using the AQI metric.
 
 Features: AQI values for each pollutant (CO, NO2, SO2, O3).
