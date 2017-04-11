@@ -4,3 +4,137 @@ title: "Blog Post 2"
 date: 2017-04-06
 categories: 
 ---
+2017 Data Science project analyzing US pollution trends from 2010 to 2016.
+
+
+By Dan Liu, Xiangyi Kong, Duo Shen, and Andy Jones
+
+### Machine Learning Analysis
+We brainstormed some hypothesis:
+
+* Linear regression between average daily emission levels of two pollutants for each state.
+* Linear regression between population of state and its emission of one pollutant. (We would need another dataset for state population for this.)
+* SVM (binary or multi-class) between different types of location settings (suburban, urban, and rural).
+* SVM between different types of land uses (residential, agricultural, etc.).
+Features would be vector of emission rates.
+* Linear regression between elevation and emission level.
+* SVM between cities that have major industries that require emitting pollution and those that do not.
+* Regression between emission levels and the prevalence of pollution-related diseases in that area (e.g., heart and lung problems).
+
+For now, we decided to work on the 3rd and 5th hypothesis.
+
+#### SVM (binary or multi-class) between different types of location settings (suburban, urban, rural, etc.)
+
+In our dataset, each site that measures pollution isassigned a "location setting", which is essentially a label of the population density and urbanness of the site. The EPA defines three types of settings: suburban, urban, and rural. Given that we would expect most pollution sites to be located in areas with lots of industrial companies and workers, we sought to understand how pollution emission levels vary between these different types of settings, and whether we could accurately predict a setting location based on its pollution levels.
+
+To examine this statistically, we concluded that an SVM classifier would be the best analysis tool to see how the data can be separated across multiple dimensions of emission levels. Since our dataset contains several metrics of emission levels, we trained multiple SVMs using different training features in order to find which peformed with the highest test accuracy.
+
+For each SVM, we performed 10-fold cross-validation. Each data point is a pollution measurement site.
+
+##### SVM 1
+The first metric we used as features to train the SVM were the average daily emission rates for each pollutant. This was a natural starting point for training the SVM, since raw emission levels are a standard measurement of pollution rates.
+
+Input to the SVM:
+* Features: Mean pollution emission levels for each pollutant (CO, NO2, SO2, O3).
+* Labels: Location setting type (suburban, urban, rural).
+
+Results:
+* Cross validation accuracy mean: 47.6%
+* Cross validation accuracy standard deviation: 12.0
+
+##### SVM 2
+Next, we used the Air Quality Index (AQI) scores as input features. AQI is a more comprehensive measure of air quality and the extent of pollution. Since the accuracy level of SVM 1 was not particularly astounding, we hoped that this metric would potentially improve accuracy.
+
+Input to the SVM:
+* Features: AQI values for each pollutant (CO, NO2, SO2, O3).
+* Labels: Location setting type (suburban, urban, rural).
+
+Results:
+* Cross validation accuracy mean: 44.7%
+* Cross validation accuracy standard deviation: 6.17
+
+##### SVM 3
+After the first two SVM attempts, we decided to reevaluate our data's labels. Since the "suburban" category could possibly be an ambiguous intermediate between "urban" and "rural", we next tried simply classifying between rural and urban, as these two categories differ more drastically.
+
+Input to the SVM:
+* Features: Mean pollution emission levels for each pollutant (CO, NO2, SO2, O3).
+* Labels: Location setting type (urban, rural).
+
+Results:
+* Cross validation accuracy mean: 72.8%
+* Cross validation accuracy standard deviation: 6.55
+
+##### SVM 4
+Finally, we did the same binary classification task using the AQI metric.
+
+Input to the SVM:
+* Features: AQI values for each pollutant (CO, NO2, SO2, O3).
+* Labels: Location setting type (urban, rural).
+
+Results:
+* Cross validation accuracy mean: 62.8%
+* Cross validation accuracy standard deviation: 19.2
+
+##### Interpretation of SVM results
+In the final two tests, we observed better-than-random performance of the SVM. The accuracy rates of these four SVMs give us several insights into the organization of our data. First, It is clear that the data is more accurately classified when there are just two labels (urban and rural) compared to three (urban, rural, and suburban). This result is intuitive because suburban sites are expected to be a mixture of the two extremes, and they could make the data harder to split with a linear SVM. Second, the SVMs performed better when they were trained with features from the raw emission levels rather than AQI. This is somewhat confusing, since AQI is expected to be a comprehensive measure, but it is possible that the raw emission rates show more drastic differences between the location setting types. Finally, these results allow us to brainstorm possible ways to improve future analyses. One option is to use larger features for training. This might involve bringing in a new dataset. We might also consider splitting the data by month or season, as these variables could affect emission rates.
+
+#### Linear regression between elevation and emission level.
+
+We extracted the "elevation" feature from our sites.csv data, and obtained the average emission value of each site. The training data looks like this:
+
+[elevation, average emission level]
+
+We trained a linear regression model with these features, but the result is not satisfactory, so we chose to use a three-dimensional feature map by adding another "latitude" feature, which gives us a better result than the previous one.  
+
+[elevation, latitude, average emission level]
+
+For this model, we also noticed that there are outliners that negatively affect our result, and we are going to remove them in the next phase of our project. 
+
+Linear Regression Model Result:
+training model accuracy: 1.9%
+
+Polynomial Feature Map Result:
+training model accuracy: 43.6%
+
+![training data points](/images/datapoints.png)
+
+
+
+### More Visualization
+We made lots of visualizations to investigate several questions and test some interesting hypotheses. The analyses and visualizations are shown below.
+
+* Which state emits the most of all the pollutants (CO, NO2, O3, SO2) over the years from 2010 to 2016?
+
+	Figures 1-3 show the total emission of all four pollutants in each state,  which gives us a sense of what the breakdown of how much each pollutant is contributing in each state. During this stage, we also found that the dataset contains varying units for levels of emission: NO2 and SO2 are in parts per billion (ppb), while CO and O3 are in different units parts per million (ppm). Overall, it is obvious that NO2 has the most total average daily emissions from 2010 to 2016 across most states, except a few states like HI, WV, NE and VI.
+
+![Figure 1. Total average emissions, 2010-2016](/images/Total_average_emissions_2010-2016.png) 
+
+{:.image-caption}
+*Figure 1. Total average emissions, 2010-2016*
+
+![Figure 2. SO2 and NO2 average emissions, 2010-2016](/images/SO2_and_NO2_average_emissions_2010-2016.png)
+
+{:.image-caption}
+*Figure 2. SO2 and NO2 average emissions, 2010-2016*
+
+![Figure 3. O3 and CO average emissions, 2010-2016](/images/O3_and_CO_average_emissions_2010-2016.png)
+
+{:.image-caption}
+*Figure 3. O3 and CO average emissions, 2010-2016*
+
+* How does the daily average emission of a single pollutant change over the years from 2010 to 2016?
+
+	Figures 4-5 show how emission changes over these years for each pollutant.  From the last three bar charts, we noticed that it is difficult (and often looks cluttered) to include the four pollutants in a single graph, so we divide into 2 graphs same as the bar charts. Moreover, the graph tells us that the emission has decreased for NO2, CO, SO2, but the emission for O3 has stayed the same.
+
+![Figure 4. US daily average emissions from 2010-2016 (NO2vsSO2)](/images/US_daily_average_emissions_from_2010-2016_NO2vsSO2.png)
+
+{:.image-caption}
+*Figure 4. US daily average emissions from 2010-2016 (NO2vsSO2)*
+
+![Figure 5. US daily average emissions from 2010-2016 (COvsO3)](/images/US_daily_average_emissions_from_2010-2016_COvsO3.png)
+
+{:.image-caption}
+*Figure 5. US daily average emissions from 2010-2016 (COvsO3)*
+
+
+
