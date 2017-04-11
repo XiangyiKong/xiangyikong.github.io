@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Blog Post 3"
+date: 2017-04-12
+categories: 
+---
+
+In this set of posts you should document your further progress.  Include any interesting issues or preliminary conclusions you have about your data.
