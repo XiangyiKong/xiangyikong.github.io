@@ -10,7 +10,11 @@ In this set of posts you should document your further progress.  Include any int
 Further progress:
 1. Unifies data units of emissions across all pollutants. 
 2. Create visualisations on dimension [maxHour, emission level]
-
+3. Permissible exposure limit of each pollutant:
+	- CO: < 50 ppm
+	- O3: < 0.1ppm
+	- NO2: < 5ppm 
+	- SO2: < 5ppm
 
 Preliminary conclusions:
 1. The emission level from highest to lowest is CO, O3, NO2, SO2, 
@@ -20,13 +24,7 @@ Preliminary conclusions:
 5. Top states for NO2: hawaii
 6. Top states for SO2: puerto rico
 
-7. Has each pollutant exceeded the unhealthy level?
-
 Interesting Issues:
-
-
-
-
 
 Facts about NO2, CO, O3, SO2:
 1. Air Quality Index (AQI): to help explain air pollution levels to the general public. Under the current standards, eight-hour average ozone mole fractions of 85 to 104 nmol/mol are described as "unhealthy for sensitive groups", 105 nmol/mol to 124 nmol/mol as "unhealthy", and 125 nmol/mol to 404 nmol/mol as "very unhealthy".
