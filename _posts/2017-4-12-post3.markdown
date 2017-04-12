@@ -7,9 +7,9 @@ categories:
 
 ### Further progress:
 1. Unifies units of emissions to parts per million(ppm) across all pollutants. 
-2. Create a visualisation that shows the distribution of emissions during 24 hours. It gives us a general idea of at what time a pollutant is more common in the air, and it helps us identify whether there is a relationship between hours and emission level. 
+2. We first want to see if there is a relationship between max_hour and emission level. Then, we calculate the frequency of max_hour for each pollutant across U.S. from 2010 to 2016. We use R to create a visualisation that shows the distribution of emissions during 24 hours. It gives us a general idea of at what time a pollutant is more common in the air, and it helps us identify whether there is a relationship between hours and emission level. 
 	![max hour](/images/Max_Hour_4pollutant.png)
-3. Create a further visualisation that selects 5 top hours that have the most emissions during the 24 hours and combines the four pollutants into one graph. From the graph, it shows that there are fewer pollutants in the afternoon than in the morning. Overall, 7am and 8am are the most serious time periods. 
+3. From the above visualisation, we want to further investiage if max_hour and emission level do have a relationship, so we decide to combine 4 pollutants into one graph. Also, we only select top 5 data points from each previous graph, which means that the top 5 has the most number of max_hours. The scatterplot shows that there are fewer pollutants in the afternoon than in the morning. Overall, 7am and 8am are the most serious time periods. 
 	![max hour total](/images/Max_Hour_day.png)
 
 ### Preliminary conclusions:
@@ -20,7 +20,7 @@ categories:
 5. Based on our dataset, we found that there are a lot of data points that has AQI Index larger than 50, which is into the second category - "moderate"("Moderate" AQI is 51 to 100. Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people. For example, people who are unusually sensitive to ozone may experience respiratory symptoms). A more detailed explanation of catergarization of AQI is listed at the end. Accordinly, we know that U.S. has a air pollution problem. We want to use this information to predict air quality for U.S. the next day using machine learning. 
 
 ### Interesting Issues:
-1. We first want to investigate if there is a relationship between land use and emission level. 
+We first want to investigate if there is a relationship between land use and emission level. 
 
 We tried to use the SVM to classify land use based on the daily average emission level of each pollutant. The result is not that satisfactory. Training accuracy is only 50%. In land_use, it has 8 categories: commerical, agricultural, desert, forest, industrial, military reservation, mobile and residential. In tuition, because the feature vector has only four dimensions(daily average value of 4 pollutants CO, SO2, NO2, O3) and each feature has little discrepancies for all 8 categories, it is hard to classify. 
 
