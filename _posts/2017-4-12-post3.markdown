@@ -5,26 +5,20 @@ date: 2017-04-12
 categories: 
 ---
 
-In this set of posts you should document your further progress.  Include any interesting issues or preliminary conclusions you have about your data.
-
 ### Further progress:
-1. Unifies data units of emissions across all pollutants. 
-2. Create a visualisation that shows how emissions are distributed in 24 hours. It gives a general idea of when each pollutant is more common in the air every day.
+1. Unifies units of emissions to parts per million(ppm) across all pollutants. 
+2. Create a visualisation that shows how emissions are distributed in 24 hours. It gives us a general idea of at what time the pollutant is more common in the air every day, and it helps us identify whether there is a relationship between hours and emission level. 
 	![max hour](/images/Max_Hour_4pollutant.png)
-3. Create a further visualisation that shows 5 top hours that have the most pollutant emissions in 24 hours. From the graph, we know that in the air, there are fewer pollutants in the afternoon than in the morning. 7am and 8am are the most serious time period. 
+3. Create a further visualisation that combines the four pollutants into one graph and shows 5 top hours of each that have the most emissions during the 24 hours. From the graph, it shows that there are fewer pollutants in the afternoon than in the morning. Overall, 7am and 8am are the most serious time period. 
 	![max hour total](/images/Max_Hour_day.png)
 
 ### Preliminary conclusions:
 1. The emission level from highest to lowest is CO, O3, NO2, SO2, 
 2. From 2010 to 2016, decreased pollutants are NO2, SO2, CO. O3 stays the same. 
-3. Top states for CO: puerto rico
-4. Top states for O3: colorado
-5. Top states for NO2: hawaii
-6. Top states for SO2: puerto rico
-
+3. Based on our first ML analysis, the data is more accurately classified when there are just two labels (urban and rural) compared to three (urban, rural, and suburban).
 
 ### Interesting Issues:
-
+// TODO:
 
 ### Interesting facts
 
