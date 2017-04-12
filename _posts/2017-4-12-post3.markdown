@@ -7,7 +7,7 @@ categories:
 
 ### Further progress:
 1. Unifies units of emissions to parts per million(ppm) across all pollutants. 
-2. We first want to see if there is a relationship between max_hour and emission level. Then, we calculate the frequency of max_hour for each pollutant across U.S. from 2010 to 2016. We use R to create a visualisation that shows the distribution of emissions during 24 hours. It gives us a general idea of at what time a pollutant is more common in the air, and it helps us identify whether there is a relationship between hours and emission level. 
+2. We first want to see if there is a relationship between max_hour and emission level. Then, we calculate the frequency of max_hour for each pollutant across U.S. from 2010 to 2016. We use R to create a visualisation that shows the distribution of max_hours during 24 hours. It gives us a general idea of at what time a pollutant is more common in the air, and it helps us identify whether there is a relationship between hours and emission level. 
 	![max hour](/images/Max_Hour_4pollutant.png)
 3. From the above visualisation, we want to further investiage if max_hour and emission level do have a relationship, so we decide to combine 4 pollutants into one graph. Also, we only select top 5 data points from each previous graph, which means that the top 5 has the most number of max_hours. The scatterplot shows that there are fewer pollutants in the afternoon than in the morning. Overall, 7am and 8am are the most serious time periods. 
 	![max hour total](/images/Max_Hour_day.png)
