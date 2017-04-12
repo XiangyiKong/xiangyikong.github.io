@@ -7,27 +7,14 @@ categories:
 
 In this set of posts you should document your further progress.  Include any interesting issues or preliminary conclusions you have about your data.
 
-Further progress:
+### Further progress:
 1. Unifies data units of emissions across all pollutants. 
-2. Create visualisations on dimension [maxHour, emission level]
-3. Recommended exposure limit of each pollutant:
-	- CO: TWA 35 ppm (40 mg/m3) C 200 ppm (229 mg/m3)
-	- O3: C 0.1 ppm (0.2 mg/m3)
-	- NO2: ST 1 ppm (1.8 mg/m3
-	- SO2: TWA 2 ppm (5 mg/m3) ST 5 ppm (13 mg/m3)
-4. Permissible exposure limit of each pollutant:
-	- CO: TWA 50 ppm (55 mg/m3)
-	- O3: TWA 0.1 ppm (0.2 mg/m3)
-	- NO2: C 5 ppm (9 mg/m3
-	- SO2: TWA 5 ppm (13 mg/m3)
-5. Immediately dangerous to life or health
-	- CO: < 1200 ppm
-	- O3: < 5 ppm
-	- NO2: < 20 ppm 
-	- SO2: < 100 ppm
+2. Create a visualisation that shows how emissions are distributed in 24 hours. It gives a general idea of when each pollutant is more common in the air every day.
+	![max hour](/images/Max_Hour_4pollutant.png)
+3. Create a further visualisation that shows 5 top hours that have the most pollutant emissions in 24 hours. From the graph, we know that in the air, there are fewer pollutants in the afternoon than in the morning. 7am and 8am are the most serious time period. 
+	![max hour total](/images/Max_Hour_day.png)
 
-
-Preliminary conclusions:
+### Preliminary conclusions:
 1. The emission level from highest to lowest is CO, O3, NO2, SO2, 
 2. From 2010 to 2016, decreased pollutants are NO2, SO2, CO. O3 stays the same. 
 3. Top states for CO: puerto rico
@@ -35,7 +22,28 @@ Preliminary conclusions:
 5. Top states for NO2: hawaii
 6. Top states for SO2: puerto rico
 
-Interesting Issues:
 
-Facts about NO2, CO, O3, SO2:
-1. Air Quality Index (AQI): to help explain air pollution levels to the general public. Under the current standards, eight-hour average ozone mole fractions of 85 to 104 nmol/mol are described as "unhealthy for sensitive groups", 105 nmol/mol to 124 nmol/mol as "unhealthy", and 125 nmol/mol to 404 nmol/mol as "very unhealthy".
+### Interesting Issues:
+
+
+### Interesting facts
+
+#### Recommended exposure limit of each pollutant:
+	- CO: TWA 35 ppm (40 mg/m3) C 200 ppm (229 mg/m3)
+	- O3: C 0.1 ppm (0.2 mg/m3)
+	- NO2: ST 1 ppm (1.8 mg/m3
+	- SO2: TWA 2 ppm (5 mg/m3) ST 5 ppm (13 mg/m3)
+
+#### Permissible exposure limit of each pollutant:
+	- CO: TWA 50 ppm (55 mg/m3)
+	- O3: TWA 0.1 ppm (0.2 mg/m3)
+	- NO2: C 5 ppm (9 mg/m3
+	- SO2: TWA 5 ppm (13 mg/m3)
+
+#### Immediately dangerous to life or health
+	- CO: < 1200 ppm
+	- O3: < 5 ppm
+	- NO2: < 20 ppm 
+	- SO2: < 100 ppm
+
+#### Air Quality Index (AQI): to help explain air pollution levels to the general public. Under the current standards, eight-hour average ozone mole fractions of 85 to 104 nmol/mol are described as "unhealthy for sensitive groups", 105 nmol/mol to 124 nmol/mol as "unhealthy", and 125 nmol/mol to 404 nmol/mol as "very unhealthy".
