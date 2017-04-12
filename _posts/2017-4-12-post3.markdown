@@ -10,11 +10,22 @@ In this set of posts you should document your further progress.  Include any int
 Further progress:
 1. Unifies data units of emissions across all pollutants. 
 2. Create visualisations on dimension [maxHour, emission level]
-3. Permissible exposure limit of each pollutant:
-	- CO: < 50 ppm
-	- O3: < 0.1ppm
-	- NO2: < 5ppm 
-	- SO2: < 5ppm
+3. Recommended exposure limit of each pollutant:
+	- CO: < TWA 50 ppm (55 mg/m3)
+	- O3: < C 0.1 ppm (0.2 mg/m3)
+	- NO2: < ST 1 ppm (1.8 mg/m3
+	- SO2: < TWA 2 ppm (5 mg/m3) ST 5 ppm (13 mg/m3)
+4. Permissible exposure limit of each pollutant:
+	- CO: < TWA 35 ppm (40 mg/m3) C 200 ppm (229 mg/m3)
+	- O3: < TWA 0.1 ppm (0.2 mg/m3)
+	- NO2: < C 5 ppm (9 mg/m3
+	- SO2: < TWA 5 ppm (13 mg/m3)
+5. Immediately dangerous to life or health
+	- CO: < 1200 ppm
+	- O3: < 5 ppm
+	- NO2: < 20 ppm 
+	- SO2: < 100 ppm
+
 
 Preliminary conclusions:
 1. The emission level from highest to lowest is CO, O3, NO2, SO2, 
