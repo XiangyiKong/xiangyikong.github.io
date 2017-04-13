@@ -50,8 +50,7 @@ We tried to use the SVM to classify land use based on the daily average emission
 
 Here are the categorization:
 
-
-	![AQI Index](/images/aqi.png)
+![AQI Index](/images/aqi.png)
 
 1. "Good" AQI is 0 to 50. Air quality is considered satisfactory, and air pollution poses little or no risk.
 2. "Moderate" AQI is 51 to 100. Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people. For example, people who are unusually sensitive to ozone may experience respiratory symptoms.
