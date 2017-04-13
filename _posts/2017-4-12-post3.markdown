@@ -24,7 +24,7 @@ categories:
 ### Interesting Issues:
 We first want to investigate if there is a relationship between land use and emission level. 
 
-We tried to use the SVM to classify land use based on the daily average emission level of each pollutant. The result is not that satisfactory. Training accuracy is only 50%. In land_use, it has 8 categories: commerical, agricultural, desert, forest, industrial, military reservation, mobile and residential. In tuition, because the feature vector has only four dimensions(daily average value of 4 pollutants CO, SO2, NO2, O3) and one feature has little difference from another feature towards the 8 categories, it is hard to classify. 
+We tried to use the SVM to classify land use based on the daily average emission level of each pollutant. The result is not that satisfactory. Training accuracy is only 50%. In land_use, it has 8 categories: commercial, agricultural, desert, forest, industrial, military reservation, mobile and residential. In tuition, because the feature vector has only four dimensions(daily average value of 4 pollutants CO, SO2, NO2, O3) and features have litte difference towards the 8 categories, it is hard to classify. 
 
 ### Interesting facts
 
