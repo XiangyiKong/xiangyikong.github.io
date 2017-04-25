@@ -17,6 +17,15 @@ For training features, we used four variables related to weather: average wind s
 
 _SVM results_
 
+We performed this SVM analylsis in four conditions: one using each pollutant as the AQI label.
 
+* CO: 10-fold cross validation accuracy: 55.30%
+* NO2: 10-fold cross validation accuracy: 52.36%
+* O3: 10-fold cross validation accuracy: 71.98%
+* SO2: 10-fold cross validation accuracy: 49.85%
+
+_Interpretation of results_
+
+This initial analysis showed us that the AQI relating to O3 may be the best indicator for pollution level.
 
 ## Future directions and plans for final presentation
