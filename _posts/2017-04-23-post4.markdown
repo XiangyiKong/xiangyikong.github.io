@@ -5,7 +5,18 @@ date: 2017-04-23
 categories: 
 ---
 
-### New machine learning analyses:
+## New machine learning analyses:
 
-## SVM using weather to predict pollution emission levels
+### SVM using weather data to predict pollution emission levels
 
+_Data preparation_
+
+We first sought to perform binary classification by training an SVM with weather data to predict whether the pollution level was "good" or "bad" on a particular day in a particular location. To do so, we had to decide how to binarize the data points into "good" and "bad" emission levels. For this first analysis, we split the data points in half by finding its median air quality index (AQI) for one pollutant and treating all data points with an AQI above the median as "bad" and those with an AQI below the median as "good".
+
+For training features, we used four variables related to weather: average wind speed, average temperature, average humidity, and average barometric pressure.
+
+_SVM results_
+
+
+
+## Future directions and plans for final presentation
