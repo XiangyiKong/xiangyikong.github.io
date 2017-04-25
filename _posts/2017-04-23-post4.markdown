@@ -7,7 +7,11 @@ categories:
 
 ## New machine learning analyses:
 
+
+
 #### SVM using weather data to predict pollution emission levels
+
+
 
 _Data preparation_
 
@@ -30,6 +34,8 @@ This initial analysis showed us that the AQI relating to O3 may be the best indi
 
 #### SVM using weather and location data to predict pollution emission levels
 
+
+
 _Data preparation_
 
 In this analysis, we included the weather data from the first SVM along with the location information of the pollution site. In this instance, we had seven variables as our training features: average wind speed, average temperature, average humidity, average barometric pressure, location setting (urban, suburban, or rural), land use, and elevation.
@@ -49,5 +55,28 @@ Since using O3 generated such a different accuracy result, we plotted the distri
 
 ![aqi hist](/images/o3_aqi_hist.png)
 
-## Future directions and plans for final presentation 
+![aqi hist](/images/no2_aqi_hist.png)
+
+![aqi hist](/images/so2_aqi_hist.png)
+
+![aqi hist](/images/co_aqi_hist.png)
+
+#### SVM using weather data to predict significantly different pollution emission levels
+
+_Data preparation_
+
+Since the first two classifiers achieved only moderately good results, we wanted a way to separate our data more clearly into data points that represented starkly different pollution emission levels. We sought to explore how well a classifier trained on features relating to weather could discern between days of "really low" and "really high" pollution. To do so, we treated any data point with an AQI less than 1/2 standard deviation below the mean as "really low" and any data point with an AQI greater than 1/2 standard deviation above the mean as "really high". Though this cut out a large fraction of the data, we saw it as a viable way to binarize our data more cleanly. The training features were the same as the first SVM described above: average wind speed, average temperature, average humidity, and average barometric pressure.
+
+_SVM results_
+
+* CO: 10-fold cross validation accuracy: 61.81%
+* NO2: 10-fold cross validation accuracy: 70.71%
+* O3: 10-fold cross validation accuracy: 85.77%
+* SO2: 10-fold cross validation accuracy: 67.46%
+
+_Interpretation of results_
+
+Unsurprisingly, spliting the data in this manner raised the accuracy of the classifier for each pollutant.
+
+## Future directions and plans for final demo
 
