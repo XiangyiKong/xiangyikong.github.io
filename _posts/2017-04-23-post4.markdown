@@ -43,5 +43,11 @@ We found similar results when these location data were included. O3 remained the
 * O3: 10-fold cross validation accuracy: 72.50%
 * SO2: 10-fold cross validation accuracy: 50.41%
 
+_Interpretation of results_
+
+Since using O3 generated such a different accuracy result, we plotted the distributions of AQIs for each pollutant as histograms:
+
+![aqi hist](/images/o3_aqi_hist.png)
+
 ## Future directions and plans for final presentation 
 
