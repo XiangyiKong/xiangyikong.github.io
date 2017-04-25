@@ -4,3 +4,8 @@ title: "Blog Post 4"
 date: 2017-04-23
 categories: 
 ---
+
+### New machine learning analyses:
+
+## SVM using weather to predict pollution emission levels
+
