@@ -7,7 +7,7 @@ categories:
 
 ## New machine learning analyses:
 
-### SVM using weather data to predict pollution emission levels
+#### SVM using weather data to predict pollution emission levels
 
 _Data preparation_
 
@@ -26,6 +26,22 @@ We performed this SVM analylsis in four conditions: one using each pollutant as 
 
 _Interpretation of results_
 
-This initial analysis showed us that the AQI relating to O3 may be the best indicator for pollution level.
+This initial analysis showed us that the AQI relating to O3 may be the best indicator for pollution level. When we used the other pollutants as the label-decider, we yielded about chance performance.
 
-## Future directions and plans for final presentation
+#### SVM using weather and location data to predict pollution emission levels
+
+_Data preparation_
+
+In this analysis, we included the weather data from the first SVM along with the location information of the pollution site. In this instance, we had seven variables as our training features: average wind speed, average temperature, average humidity, average barometric pressure, location setting (urban, suburban, or rural), land use, and elevation.
+
+_SVM results_
+
+We found similar results when these location data were included. O3 remained the best indicator for labeling the data as "good" or "bad" pollution levels.
+
+* CO: 10-fold cross validation accuracy: 53.17%
+* NO2: 10-fold cross validation accuracy: 55.56%
+* O3: 10-fold cross validation accuracy: 72.50%
+* SO2: 10-fold cross validation accuracy: 50.41%
+
+## Future directions and plans for final presentation 
+
