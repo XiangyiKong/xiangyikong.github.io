@@ -51,16 +51,6 @@ We found similar results when these location data were included. O3 remained the
 
 _Interpretation of results_
 
-Since using O3 generated such a different accuracy result, we plotted the distributions of AQIs for each pollutant as histograms:
-
-![aqi hist](/images/o3_aqi_hist.png)
-
-![aqi hist](/images/no2_aqi_hist.png)
-
-![aqi hist](/images/so2_aqi_hist.png)
-
-![aqi hist](/images/co_aqi_hist.png)
-
 #### SVM using weather data to predict significantly different pollution emission levels
 
 _Data preparation_
@@ -78,5 +68,37 @@ _Interpretation of results_
 
 Unsurprisingly, spliting the data in this manner raised the accuracy of the classifier for each pollutant.
 
+Since using O3 generated such a different accuracy result, we plotted the distributions of AQIs for each pollutant as histograms:
+
+![aqi hist](/images/o3_aqi_hist.png)
+
+![aqi hist](/images/no2_aqi_hist.png)
+
+![aqi hist](/images/so2_aqi_hist.png)
+
+![aqi hist](/images/co_aqi_hist.png)
+
+The advantage of this model is that it gives us a finer grained classification because U.S. tends to have a better air quality in the world, and by artificially choosing the median value as a threshold for AQI, it will give us a better test result towards the U.S.. 
+
+The disadvantage of this model is that the training model depends more on our current data sets, aka the current environment situation in the U.S., so it is hard to generalize to other countries in the world. We are wondering if choosing a training model that use AQI = 50 as a threshold works(According to EPA, AQI above 50, air quality is bad.).
+
+Moreover, from the four histograms, we know that the ratio of AQI > 50 to the total number of AQIs is pretty low for each pollutant. Especially for CO, the ratio is around 2 %. Accordingly, it is hard to get a good training result from this unbalanced data sets since the training model tends to classify each record to an AQI less than 50. To solve this problem, we decide to use oversampling/undersampling method, which can adjust the class distribution of a data set. 
+
+Also, we tried several different classification models, such as logistic regression, navie bayes, etc. After multiple experiments, the results showed that logistic regression has the highest accuracy.
+
+_Logistic Regression results_
+
+* CO: 10-fold cross validation accuracy: 93.54%, std:0.027
+* NO2: 10-fold cross validation accuracy: 82.35%, std: 0.039
+* O3: 10-fold cross validation accuracy: 85.77%, std: 0.030
+* SO2: 10-fold cross validation accuracy: 80.25%, std: 0.022
+
+
 ## Future directions and plans for final demo
+
+* In the next two weeks, we plan to further investigate the relation between time series and pollutants' emission levels as well as find out better feature extraction for the classification.
+
+* For the application demo, we wish to create an interactive prediction web page where user can input weather conditions, locations and future time, and our model will give a predicted air quality. 
+
+
 
