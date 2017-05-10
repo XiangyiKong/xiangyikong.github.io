@@ -1,6 +1,35 @@
 ---
 layout: post
-title: "Blog Post 5"
+title: "Final Blog Post"
 date: 2017-05-10
 categories:
 ---
+
+Our final post!
+
+For this project, we have anaylzed data sets from EPA and created a prediction engine for air quality in the United States. 
+
+### Data processing:
+We used a pollution dataset that is provided by the EPA, which contains information about daily pollution from collection sites across the US from 2010-2016. Also, we had a weather dataset that is also provided by the EPA and contains meteorological data for each site contained by the pollution dataset. During the data cleaning and visualisation process, we mainly used R since it has a user-friendly package to parse csv files and draw statistical graphs. 
+
+During the initial stage, we tried to find relationships between emission level and possible factors such as time, location, altitude, max_hour. Later, we find out that there are many inconsistencies of units in our data set, and some of the values are invalid, so we decide to use AQI as our measurement for air quality because it is an official standard defined by EPA and removed any invalid data entries. 
+
+### Machine Learning Model:
+For features, we initially used a simple set of location information such as elevation, longitude, latitude, or location type. However, using a single feature does not give us a satisfactory result and few achieve a more than 50% accuracy, so we decide to use weather data from EPA as our additional feature input. Moreover, we decide to combine features instead of using a single feature while training our machine learning model, and we get better results by using this strategy.
+
+For models, we tried to use SVM, Logistic Regression, Linear Regression, Decision Tree and Neural Networks as our prediction engine. After few attempts, Logistic regression returned the highest result, and we decided to use that as our final model for our prediction engine.
+
+### Conclusion:
+First, we determined that the hours of maximum pollution were typically in the morning — averaged across all pollution sites, 7 and 8AM showed the peak pollution of all hours. Given this analysis just using descriptive statistics, we generally recommend avoiding excessive outdoor activity in highly polluted areas during these times.
+
+Second, pollution overall in the US seems to be declining over time, but certain states, like California and Arizona, continue to show high emission rates and could benefit from our prediction engine.
+
+Third, our machine learning results show that weather and location can be informative for predicting air pollution. After performing preliminary analysis to find the most informative features, we achieved our goal of an accuracy rate above 80%. Temporal data, on the other hand, may be more noisy, and we found it difficult to achieve reasonable predictions based on temporal trends alone.
+
+
+### User Interface:
+At the end, we created a website that allowed users to enter a city and a state, and gave back results based on our model. 
+
+![demo](/images/demo1.png)
+
+![demo](/images/demo2.png)
